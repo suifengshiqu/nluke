@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using NLuke.Forms;
 using NLuke.Helpers;
 using NLuke.IndexWapper;
+using NLuke.ViewPanel;
 
 namespace NLuke
 {
@@ -44,7 +45,8 @@ namespace NLuke
         }
 
         private void MainForm_Load(object sender, EventArgs e) {
-            
+            tabPage1.Controls.Add(new GeneralView());
+            tabPage1.Show();
         }
 
         private void MainForm_Shown(object sender, EventArgs e) {

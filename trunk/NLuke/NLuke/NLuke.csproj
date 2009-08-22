@@ -58,7 +58,9 @@
     <Compile Include="Helpers\MessageHelper.cs" />
     <Compile Include="Helpers\ProcessHelper.cs" />
     <Compile Include="IndexWapper\CurrentIndex.cs" />
+    <Compile Include="IndexWapper\GeneralBind.cs" />
     <Compile Include="IndexWapper\IndexOpen.cs" />
+    <Compile Include="IndexWapper\IOpen.cs" />
     <Compile Include="IndexWapper\TermInfoQueue.cs" />
     <Compile Include="IndexWapper\TermModle.cs" />
     <Compile Include="MainForm.cs">
@@ -86,6 +88,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewPanel\GeneralView.resx">
+      <DependentUpon>GeneralView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -98,6 +104,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ViewPanel\GeneralView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPanel\GeneralView.Designer.cs">
+      <DependentUpon>GeneralView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
