@@ -32,7 +32,7 @@ namespace NLuke.IndexWapper {
 
         public static bool IsIndexBeOpend() {
             lock (index_locked) {
-                return index != null;
+                return index != null && index.IsOpend;
             }
         }
     }

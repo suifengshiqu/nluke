@@ -17,12 +17,30 @@ namespace NLuke.IndexWapper {
     /// <summary>
     /// 
     /// </summary>
-    public class IndexOpen {
+    public class IndexOpen : IOpen {
         private bool isOpened = false;
         private bool isLocked;
         private string indexPath;
 
         private IndexReader reader;
+
+        public IndexReader Reader {
+            get {
+                return reader;
+            }
+        }
+
+        public string IndexPath {
+            get {
+                return indexPath;
+            }
+        }
+
+        public bool IsOpend {
+            get {
+                return isOpened;
+            }
+        }
 
         public IndexOpen(string indexPath, bool isLocked) {
             this.indexPath = indexPath;
