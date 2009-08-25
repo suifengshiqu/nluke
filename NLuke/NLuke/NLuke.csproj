@@ -58,11 +58,12 @@
     <Compile Include="Helpers\MessageHelper.cs" />
     <Compile Include="Helpers\ProcessHelper.cs" />
     <Compile Include="IndexWapper\CurrentIndex.cs" />
+    <Compile Include="IndexWapper\FieldTermsRelation.cs" />
     <Compile Include="IndexWapper\GeneralBind.cs" />
     <Compile Include="IndexWapper\IndexOpen.cs" />
     <Compile Include="IndexWapper\IOpen.cs" />
     <Compile Include="IndexWapper\TermInfoQueue.cs" />
-    <Compile Include="IndexWapper\TermModle.cs" />
+    <Compile Include="IndexWapper\TermModel.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewPanel\DocumentView.resx">
+      <DependentUpon>DocumentView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewPanel\GeneralView.resx">
       <DependentUpon>GeneralView.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -105,12 +110,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewPanel\DocumentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewPanel\DocumentView.Designer.cs">
+      <DependentUpon>DocumentView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewPanel\GeneralView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ViewPanel\GeneralView.Designer.cs">
       <DependentUpon>GeneralView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewPanel\IUpdateUI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
