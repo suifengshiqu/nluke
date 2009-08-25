@@ -21,8 +21,8 @@ namespace NLuke.LuceneAPI {
         }
 
         public override bool LessThan(object a, object b) {
-            TermModle modle = (TermModle)a;
-            TermModle modle2 = (TermModle)b;
+            TermModel modle = (TermModel)a;
+            TermModel modle2 = (TermModel)b;
             return (modle.Count < modle2.Count);
         }
 

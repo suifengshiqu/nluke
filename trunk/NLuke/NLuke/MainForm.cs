@@ -28,7 +28,8 @@ namespace NLuke
         }
 
         private void UpdatePanelUI() {
-
+            ((IUpdateUI)tabPage1.Controls[0]).UpdateUI(); 
+            ((IUpdateUI)tabPage2.Controls[0]).UpdateUI();
         }
 
         private void 关于NLukeToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -46,6 +47,7 @@ namespace NLuke
 
         private void MainForm_Load(object sender, EventArgs e) {
             tabPage1.Controls.Add(new GeneralView());
+            tabPage2.Controls.Add(new DocumentView());
             tabPage1.Show();
         }
 

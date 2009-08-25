@@ -15,7 +15,7 @@ namespace NLuke.LuceneAPI {
     /// <summary>
     /// 项模型，额外增加了出现次数属性。
     /// </summary>
-    public class TermModle {
+    public class TermModel {
         private int count;
         private Term term;
         /// <summary>
@@ -23,7 +23,7 @@ namespace NLuke.LuceneAPI {
         /// </summary>
         /// <param name="term">项数据</param>
         /// <param name="count">出现次数</param>
-        public TermModle(Term term, int count) {
+        public TermModel(Term term, int count) {
             this.term = term;
             this.count = count;
         }

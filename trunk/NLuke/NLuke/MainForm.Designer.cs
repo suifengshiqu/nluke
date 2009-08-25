@@ -58,7 +58,7 @@
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(660, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,32 +77,32 @@
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 重新打开ToolStripMenuItem
             // 
             this.重新打开ToolStripMenuItem.Name = "重新打开ToolStripMenuItem";
-            this.重新打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.重新打开ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.重新打开ToolStripMenuItem.Text = "重新打开";
             this.重新打开ToolStripMenuItem.Click += new System.EventHandler(this.重新打开ToolStripMenuItem_Click);
             // 
             // 关闭ToolStripMenuItem
             // 
             this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.关闭ToolStripMenuItem.Text = "关闭";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 6);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             // 
             // 帮助ToolStripMenuItem
@@ -120,39 +120,39 @@
             // 使用帮助ToolStripMenuItem
             // 
             this.使用帮助ToolStripMenuItem.Name = "使用帮助ToolStripMenuItem";
-            this.使用帮助ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.使用帮助ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.使用帮助ToolStripMenuItem.Text = "使用帮助";
             // 
             // 版本更新ToolStripMenuItem
             // 
             this.版本更新ToolStripMenuItem.Name = "版本更新ToolStripMenuItem";
-            this.版本更新ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.版本更新ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.版本更新ToolStripMenuItem.Text = "版本更新";
             // 
             // 获取源码ToolStripMenuItem
             // 
             this.获取源码ToolStripMenuItem.Name = "获取源码ToolStripMenuItem";
-            this.获取源码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.获取源码ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.获取源码ToolStripMenuItem.Text = "获取源码";
             this.获取源码ToolStripMenuItem.Click += new System.EventHandler(this.获取源码ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(121, 6);
             // 
             // 关于NLukeToolStripMenuItem
             // 
             this.关于NLukeToolStripMenuItem.Name = "关于NLukeToolStripMenuItem";
-            this.关于NLukeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于NLukeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.关于NLukeToolStripMenuItem.Text = "关于NLuke";
             this.关于NLukeToolStripMenuItem.Click += new System.EventHandler(this.关于NLukeToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 426);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(660, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(742, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -166,7 +166,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(660, 402);
+            this.tabControl1.Size = new System.Drawing.Size(742, 427);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -174,7 +174,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(652, 374);
+            this.tabPage1.Size = new System.Drawing.Size(734, 399);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "概况";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 448);
+            this.ClientSize = new System.Drawing.Size(742, 473);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
