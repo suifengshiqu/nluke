@@ -30,6 +30,7 @@ namespace NLuke
         private void UpdatePanelUI() {
             ((IUpdateUI)tabPage1.Controls[0]).UpdateUI(); 
             ((IUpdateUI)tabPage2.Controls[0]).UpdateUI();
+            ((IUpdateUI)tabPage3.Controls[0]).UpdateUI();
         }
 
         private void 关于NLukeToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -48,6 +49,7 @@ namespace NLuke
         private void MainForm_Load(object sender, EventArgs e) {
             tabPage1.Controls.Add(new GeneralView());
             tabPage2.Controls.Add(new DocumentView());
+            tabPage3.Controls.Add(new SearchView());
             tabPage1.Show();
         }
 
@@ -58,7 +60,7 @@ namespace NLuke
         }
 
         private void 重新打开ToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (!CurrentIndex.IsIndexBeOpend()) {
+            if (CurrentIndex.IsIndexBeOpend()) {
                 IndexOpen open = CurrentIndex.GetCurrentOpendIndex();
                 open.ReOpen();
 

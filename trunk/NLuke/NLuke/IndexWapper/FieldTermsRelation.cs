@@ -92,5 +92,20 @@ namespace NLuke.IndexWapper {
             }
             return modleArray;
         }
+
+        public TermModel FindTerm(string field, string text, bool current) {
+            TermEnum enum2 = open.Reader.Terms();
+            if (enum2.SkipTo(new Term(field, text))) {
+                TermModel modle2 = null;
+                while ((!current && enum2.Next() && field.Equals(enum2.Term().Field())) 
+                    || current) {
+                    modle2 = new TermModel(enum2.Term(), enum2.DocFreq());
+                    break;
+                } 
+                enum2.Close();
+                return modle2;
+            }
+            return null;
+        }
     }
 }

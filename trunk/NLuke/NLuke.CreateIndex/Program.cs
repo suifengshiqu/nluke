@@ -8,9 +8,10 @@ using Lucene.Net.Documents;
 namespace NLuke.CreateIndex {
     class Program {
         static void Main(string[] args) {
-            IndexWriter writer = new IndexWriter("d:/index", new StandardAnalyzer());
+            IndexWriter writer = new IndexWriter("d:/index", new StandardAnalyzer(), true);
             AddDocument(1, "我是谁", writer);
             AddDocument(2, "来自哪里", writer);
+            writer.Optimize();
             writer.Close();
         }
 
