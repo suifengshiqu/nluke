@@ -120,31 +120,33 @@
             // 使用帮助ToolStripMenuItem
             // 
             this.使用帮助ToolStripMenuItem.Name = "使用帮助ToolStripMenuItem";
-            this.使用帮助ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.使用帮助ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.使用帮助ToolStripMenuItem.Text = "使用帮助";
+            this.使用帮助ToolStripMenuItem.Click += new System.EventHandler(this.使用帮助ToolStripMenuItem_Click);
             // 
             // 版本更新ToolStripMenuItem
             // 
             this.版本更新ToolStripMenuItem.Name = "版本更新ToolStripMenuItem";
-            this.版本更新ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.版本更新ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.版本更新ToolStripMenuItem.Text = "版本更新";
+            this.版本更新ToolStripMenuItem.Click += new System.EventHandler(this.版本更新ToolStripMenuItem_Click);
             // 
             // 获取源码ToolStripMenuItem
             // 
             this.获取源码ToolStripMenuItem.Name = "获取源码ToolStripMenuItem";
-            this.获取源码ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.获取源码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.获取源码ToolStripMenuItem.Text = "获取源码";
             this.获取源码ToolStripMenuItem.Click += new System.EventHandler(this.获取源码ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(121, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
             // 关于NLukeToolStripMenuItem
             // 
             this.关于NLukeToolStripMenuItem.Name = "关于NLukeToolStripMenuItem";
-            this.关于NLukeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于NLukeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于NLukeToolStripMenuItem.Text = "关于NLuke";
             this.关于NLukeToolStripMenuItem.Click += new System.EventHandler(this.关于NLukeToolStripMenuItem_Click);
             // 
@@ -184,7 +186,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(652, 374);
+            this.tabPage2.Size = new System.Drawing.Size(734, 399);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "文档";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -194,7 +196,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(652, 374);
+            this.tabPage3.Size = new System.Drawing.Size(734, 399);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "搜索";
             this.tabPage3.UseVisualStyleBackColor = true;
