@@ -67,5 +67,13 @@ namespace NLuke
                 UpdatePanelUI();
             }
         }
+
+        private void 使用帮助ToolStripMenuItem_Click(object sender, EventArgs e) {
+            ProcessHelper.StartDefaultExplorer("http://www.cnblogs.com/birdshover/archive/2008/09/03/1283000.html");
+        }
+
+        private void 版本更新ToolStripMenuItem_Click(object sender, EventArgs e) {
+            ProcessHelper.StartDefaultExplorer("http://www.cnblogs.com/birdshover/archive/2008/09/23/1283007.html");
+        }
     }
 }
