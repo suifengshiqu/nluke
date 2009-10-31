@@ -10,6 +10,7 @@ using NLuke.LuceneAPI;
 using Lucene.Net.Index;
 using Lucene.Net.Documents;
 using System.Collections;
+using NLuke.Helpers;
 
 namespace NLuke.ViewPanel {
     public partial class DocumentView : UserControl, IUpdateUI {
@@ -54,7 +55,7 @@ namespace NLuke.ViewPanel {
 
         private void button2_Click(object sender, EventArgs e) {
             int id = getDocumentID();
-            if (id < docNum)
+            if (id < docNum - 1)
                 id++;
             textBox1.Text = id.ToString();
             FindDocuemnt(id);
@@ -66,6 +67,7 @@ namespace NLuke.ViewPanel {
         }
 
         private void FindDocuemnt(int id) {
+            ShowDocument(id);
         }
 
         private void DocumentView_Load(object sender, EventArgs e) {
@@ -132,18 +134,28 @@ namespace NLuke.ViewPanel {
         private void ShowCurrentDocument() {
             if (docs.Count > 0) {
                 TermDocumentsRelation.TermDoc doc = docs[termDocPtr];
-                IOpen open = CurrentIndex.GetCurrentOpendIndex();
-                Document document = open.Reader.Document(doc.Doc);
-                listView1.Clear();
-                listView1.Columns.Add("Field", 120);
-                listView1.Columns.Add("Norm", 120);
-                listView1.Columns.Add("Text", 400);
+                label8.Text = string.Format(label8.Text, doc.Freq);
+                ShowDocument(doc.Doc);
+            }
+        }
 
-                IList list = document.GetFields();
-                for (int i = 0; i < list.Count; i++) {
-                    Field f = list[i] as Field;
-                    listView1.Items.Add(new ListViewItem(new string[] { f.Name(), doc.Norm.ToString(), f.StringValue() })); 
-                }
+        private void ShowDocument(int docId) {
+            listView1.Clear();
+            listView1.Columns.Add("Field", 120);
+            listView1.Columns.Add("Norm", 120);
+            listView1.Columns.Add("Text", 400);
+            IOpen open = CurrentIndex.GetCurrentOpendIndex();
+            if (docId >= open.Reader.NumDocs()) {
+                MessageHelper.ShowErrorMessage("当前Id超出文档最大Id。");
+                return;
+            }
+
+            Document doc = open.Reader.Document(docId);
+            
+            IList list = doc.GetFields();
+            for (int i = 0; i < list.Count; i++) {
+                Field f = list[i] as Field;
+                listView1.Items.Add(new ListViewItem(new string[] { f.Name(), TermDocumentsRelation.GetNorm(CurrentIndex.GetCurrentOpendIndex().Reader, f.Name(), docId).ToString(), f.StringValue() }));
             }
         }
     }

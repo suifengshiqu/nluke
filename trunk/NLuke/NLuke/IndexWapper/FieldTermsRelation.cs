@@ -15,7 +15,7 @@ using NLuke.LuceneAPI;
 
 namespace NLuke.IndexWapper {
     /// <summary>
-    /// 
+    /// 字段与Term的关系处理类
     /// </summary>
     public class FieldTermsRelation {
         private static FieldTermsRelation cached;
@@ -35,6 +35,9 @@ namespace NLuke.IndexWapper {
 
         private string[] fields;
         private object lockobj = new object();
+        /// <summary>
+        /// 获得所有的字段
+        /// </summary>
         public string[] Fields {
             get {
                 if (fields == null) {
@@ -54,6 +57,9 @@ namespace NLuke.IndexWapper {
                 return fields;
             }
         }
+        /// <summary>
+        /// 释放缓存的字段
+        /// </summary>
         public void ResetFields() {
             lock (lockobj) {
                 fields = null;
@@ -61,11 +67,18 @@ namespace NLuke.IndexWapper {
         }
 
         private string currentField;
-
+        /// <summary>
+        /// 切换当前字段
+        /// </summary>
+        /// <param name="field"></param>
         public void CurrentFieldChanged(string field) {
             this.currentField = field;
         }
-
+        /// <summary>
+        /// 查找指定数目的Term
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         public TermModel[] FindTerms(int num) {
             num++;
             TermInfoQueue queue = new TermInfoQueue(num);
@@ -92,7 +105,13 @@ namespace NLuke.IndexWapper {
             }
             return modleArray;
         }
-
+        /// <summary>
+        /// 查找指定字段Term
+        /// </summary>
+        /// <param name="field"></param>
+        /// <param name="text"></param>
+        /// <param name="current"></param>
+        /// <returns></returns>
         public TermModel FindTerm(string field, string text, bool current) {
             TermEnum enum2 = open.Reader.Terms();
             if (enum2.SkipTo(new Term(field, text))) {

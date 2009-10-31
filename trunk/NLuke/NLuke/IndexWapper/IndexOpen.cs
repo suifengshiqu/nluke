@@ -12,6 +12,7 @@ using System.Text;
 using Lucene.Net.Store;
 using Lucene.Net.Index;
 using System.Windows.Forms;
+using NLuke.Helpers;
 
 namespace NLuke.IndexWapper {
     /// <summary>
@@ -68,6 +69,7 @@ namespace NLuke.IndexWapper {
                 reader = IndexReader.Open(indexPath);
                 isOpened = true;
             } catch (Exception exception) {
+                MessageHelper.ShowErrorMessage(exception.Message);
             }
             return isOpened;
         }
