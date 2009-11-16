@@ -25,6 +25,7 @@ namespace NLuke.Forms {
 
         private void button2_Click(object sender, EventArgs e) {
             IndexOpen open = new IndexOpen(this.comboBox1.Text, false);
+            Console.WriteLine(110);
             if (open.IndexExists()) {
                 bool isOpend = open.Open();
                 if (isOpend) {

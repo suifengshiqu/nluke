@@ -55,10 +55,40 @@ namespace NLuke.IndexWapper {
         }
 
         public class TermDoc {
-            public int Doc { get; set; }
-            public int Freq { get; set; }
-            public Term Term { get; set; }
-            public float Norm { get; set; }
+            private int doc;
+            public int Doc { get{return doc ;} set{doc =value;} }
+            private int freq;
+
+            public int Freq{
+            	get{
+            		return freq;
+            	}
+            	set{
+            		freq = value;
+            	}
+            }
+            
+            private Term term;
+
+            public Term Term{
+            	get{
+            		return term;
+            	}
+            	set{
+            		term = value;
+            	}
+            }
+            
+            private float norm;
+
+            public float Norm{
+            	get{
+            		return norm;
+            	}
+            	set{
+            		norm = value;
+            	}
+            }            
         }
     }
 }

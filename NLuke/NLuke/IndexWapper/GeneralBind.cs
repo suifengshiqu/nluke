@@ -42,12 +42,18 @@ namespace NLuke.IndexWapper {
         /// 绑定数据结构
         /// </summary>
         public class ViewData {
-            public string IndexPath { get; set; }
-            public int FieldNum { get; set; }
-            public int DocumentNum { get; set; }
-            public bool IsOptimized { get; set; }
-            public DateTime UpdateTime { get; set; }
-            public long Version { get; set; }
+			private string indexPath;
+            public string IndexPath { get{ return indexPath ;}set{ indexPath = value ;} }
+            private int fieldNum;            
+            public int FieldNum { get{return fieldNum ;} set{fieldNum = value;}}
+            private int docNum;
+            public int DocumentNum { get{ return docNum ;} set{ docNum = value ;} }
+            private bool isOptimized;
+            public bool IsOptimized { get{ return isOptimized ;} set{isOptimized = value;} }
+            private DateTime updateTime;            
+            public DateTime UpdateTime { get{ return updateTime ;} set{ updateTime = value ;} }
+            private long version;            
+            public long Version { get{ return version ;} set{ version =value;} }
         }
     }
 }
