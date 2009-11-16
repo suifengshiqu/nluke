@@ -21,6 +21,11 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>NLuke.CreateIndex</AssemblyName>
+    <RootNamespace>NLuke.CreateIndex</RootNamespace>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,9 +34,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>NLuke.CreateIndex</AssemblyName>
+    <DebugSymbols>true</DebugSymbols>
+    <RootNamespace>NLuke.CreateIndex</RootNamespace>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lucene.Net, Version=2.3.1.2, Culture=neutral, PublicKeyToken=900db7ac5dcbbb2d, processorArchitecture=MSIL">
+    <Reference Include="Lucene.Net, Version=2.3.1.2, Culture=neutral, PublicKeyToken=900db7ac5dcbbb2d">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\libs\Lucene.Net.dll</HintPath>
     </Reference>
